@@ -1,7 +1,7 @@
 ##Getting and Cleaning Data Course Project
 This repsitory is created by Sayyed Mohsen Vazirizade for the course Getting and Cleaning Data Course Projecta available on coursera using R programming.
 
-This repo includes:__
+This repo includes: 
 UCI HAR Dataset: it includes all the data that we need__
 CodeBook:__
 README.md:__
