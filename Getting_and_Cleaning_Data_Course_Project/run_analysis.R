@@ -47,6 +47,20 @@ names(subjectdata) <- "subject"
 alldata <- cbind(xdata, ydata, subjectdata)
 
 ##Step5 From the data set in step 4, creating a second, independent tidy data set with the average of each variable for each activity and each subject.
-NewData <- alldata %>%   group_by(subject,activity) %>%  summarise_each(funs(mean))
-write.table(NewData, "NewData.txt", row.name=FALSE)
+NewData <- alldata %>% group_by(subject,activity) %>%  summarise_all(funs(mean))
+write.table(NewData[,30:50], "NewData.txt", row.name=FALSE)
+dim(NewData)
 
+x <- alldata %>% group_by(subject,activity) %>%  summarise_all(funs(mean))
+n_groups(x)
+group_size(x)
+group_vars(x)
+levels(x)
+groups(x)
+
+x <- alldata %>% group_by(subjectdata) 
+n_groups(x)
+group_size(x)
+group_vars(x)
+levels(alldata$subjectdata)
+groups(x)
